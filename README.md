@@ -1,4 +1,9 @@
 # job-profile-vue
+## Run with docker
+```bash
+docker build -t job-profile-vue .
+docker run -p 8080:80 job-profile-vue
+```
 
 ## Project setup
 ```
