@@ -27,3 +27,14 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## AWS EC2 Instance Setup:
+```
+sudo yum update -y
+sudo yum install -y httpd
+
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl status httpd
+
+```
