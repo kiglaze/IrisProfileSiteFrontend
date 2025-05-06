@@ -1,12 +1,8 @@
 # job-profile-vue
 ## Run with docker
 ```bash
-set -a; source .env; set +a
-docker build --no-cache --build-arg GITHUB_USERNAME=$GITHUB_USERNAME \
-             --build-arg GITHUB_PAT=$GITHUB_PAT \
-             --build-arg GITHUB_REPO=$GITHUB_REPO \
-             -t job-profile-vue .
-docker run -p 8080:80 job-profile-vue
+docker build --progress=plain --no-cache -t job-profile-vue .
+docker run -d -p 8080:80 job-profile-vue
 ```
 
 ## Project setup
@@ -35,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## AWS EC2 Instance Setup:
 ### SSH
 ```
-ssh -i IrisProfile_KeyPair.pem ec2-user@ec2-34-227-17-7.compute-1.amazonaws.com
+ssh -i ../../AWS_pems/IrisProfile_KeyPair.pem ec2-user@ec2-34-227-17-7.compute-1.amazonaws.com
 ```
 ### Initial Commands in EC2 Instance Terminal
 ```
