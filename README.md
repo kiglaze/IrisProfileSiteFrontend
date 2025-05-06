@@ -29,6 +29,11 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## AWS EC2 Instance Setup:
+### SSH
+```
+ssh -i IrisProfile_KeyPair.pem ec2-user@ec2-34-227-17-7.compute-1.amazonaws.com
+```
+### Initial Commands in EC2 Instance Terminal
 ```
 sudo yum update -y
 sudo yum install -y httpd
@@ -38,3 +43,10 @@ sudo systemctl enable httpd
 sudo systemctl status httpd
 
 ```
+### Security Group Rules:
+- Inbound Rules:
+  - default
+  - SSH: Port 22
+- Outbound Rules:
+  - default
+  - HTTP: Port 80
