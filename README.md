@@ -1,7 +1,11 @@
 # job-profile-vue
 ## Run with docker
 ```bash
-docker build -t job-profile-vue .
+set -a; source .env; set +a
+docker build --build-arg GITHUB_USERNAME=$GITHUB_USERNAME \
+             --build-arg GITHUB_PAT=$GITHUB_PAT \
+             --build-arg GITHUB_REPO=$GITHUB_REPO \
+             -t job-profile-vue .
 docker run -p 8080:80 job-profile-vue
 ```
 
