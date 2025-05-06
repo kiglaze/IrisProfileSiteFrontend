@@ -2,7 +2,7 @@
 ## Run with docker
 ```bash
 docker build --progress=plain --no-cache -t job-profile-vue .
-docker run -d -p 8080:80 job-profile-vue
+docker run -d -p 80:80 -p 443:443 job-profile-vue
 ```
 
 ## Project setup
@@ -56,6 +56,12 @@ cp .env.template .env
 ```
 Fill out .env file variables in .env file.
 
+I chose to stop and disable Apache to free up port 80 for the docker container to run the site on port 80....
+Alternatively, if you want to keep Apache, you could configure it as a reverse proxy to forward traffic to your Docker container. However, this adds complexity and is unnecessary unless you have a specific use case for Apache.
+```
+sudo systemctl stop httpd
+sudo systemctl disable httpd
+```
 
 ### Security Group Rules:
 - Inbound Rules:

@@ -17,4 +17,5 @@ RUN ls -l /app/IrisProfileSiteFrontend
 FROM nginx:alpine
 COPY --from=build-stage /app/IrisProfileSiteFrontend/dist /usr/share/nginx/html
 EXPOSE 80
+EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
