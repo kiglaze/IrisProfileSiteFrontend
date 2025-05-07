@@ -2,7 +2,7 @@
 ## Run with docker
 ```bash
 docker build --progress=plain --no-cache -t job-profile-vue .
-docker run -d -p 80:80 -p 443:443 job-profile-vue
+docker run -d -p 8080:80 -p 443:443 job-profile-vue
 ```
 
 ## Project setup
@@ -62,6 +62,25 @@ Alternatively, if you want to keep Apache, you could configure it as a reverse p
 sudo systemctl stop httpd
 sudo systemctl disable httpd
 ```
+### Install certbot
+```
+sudo yum install -y certbot python3-certbot-nginx
+certbot --version
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl status httpd
+sudo certbot --apache -d irisglaze.net -d www.irisglaze.net
+
+```
+Run Docker container on port 8080, and use Apache (which is on port 80): 
+  - reverse proxy to Docker container
+  - <VirtualHost *:80> section added to /etc/httpd/conf.d/irisglaze.conf
+
+Reload Apache to apply changes:
+```
+sudo systemctl reload httpd
+```
+
 
 ### Security Group Rules:
 - Inbound Rules:
