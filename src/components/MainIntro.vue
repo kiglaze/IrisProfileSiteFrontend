@@ -1,7 +1,6 @@
 <template>
-  <v-container>
-    <v-card>
-      <div class="content-overlay">
+    <v-container>
+      <v-card>
         <h1 class="font-weight-bold">About Iris Glaze</h1>
         <p>
           Hi, I have worked professionally as a full-stack web developer for a total of 8 years.
@@ -81,9 +80,10 @@
             </section>
           </v-col>
         </v-row>
-      </div>
-    </v-card>
-  </v-container>
+
+      </v-card>
+
+    </v-container>
 </template>
 
 <script>
@@ -106,12 +106,6 @@ export default {
   display: block;
 }
 
-.content-overlay {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-}
 @media (min-width: 960px) {
   .company-history {
     margin: 1em 5em;

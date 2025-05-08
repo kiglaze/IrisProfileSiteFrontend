@@ -1,9 +1,11 @@
 <template>
-  <div class="app-container">
-    <div class="content pebbles-bg">
-      <MainIntro msg="test"/>
-    </div>
-    <v-footer class="footer">
+  <div class="app-container pebbles-bg">
+    <main class="content content-overlay">
+      <div class="scroll-container">
+        <MainIntro msg="test"/>
+      </div>
+    </main>
+    <footer class="footer">
       <section class="account-links">
         <v-card flat tile width="100%" class="text-center">
           <IconAccountLink type="linkedin" :url-string="linkedinUrl" />
@@ -12,7 +14,7 @@
           <IconAccountLink type="github" :url-string="githubNCSUUrl" />
         </v-card>
       </section>
-    </v-footer>
+    </footer>
   </div>
 </template>
 
@@ -44,25 +46,53 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
 .pebbles-bg {
   background: url('~@/assets/pebbles.jpeg') no-repeat center center;
   background-size: cover;
-  height: 100vh; /* Full screen height */
 }
+
 .app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: url('~@/assets/pebbles.jpeg') no-repeat center center;
-  background-size: cover;
-  height: 100vh; /* Full screen height */
+  height: 100%;
 }
-.content {
-  flex: 1;
+
+.content-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
 }
+
 .footer {
   background-color: #cddcf3;
   padding-top: .1em;
+}
+html, body {
+  height: 100%;
+}
+main {
+  padding-bottom: 2em;
+  margin-bottom: -100px;
+  background: #ddd;
+}
+main:after {
+  content: "";
+  display: block;
+  height: 2em;
+}
+footer {
+  height: 2em;
+  background: #eee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.scroll-container {
+  max-height: 100%; /* Set the maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 1em; /* Optional: Add padding for better spacing */
+  border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
 }
 </style>
