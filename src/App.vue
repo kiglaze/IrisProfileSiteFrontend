@@ -93,6 +93,5 @@ footer {
   max-height: 100%; /* Set the maximum height */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 1em; /* Optional: Add padding for better spacing */
-  border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
 }
 </style>
