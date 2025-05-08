@@ -3,8 +3,9 @@
 ### For production:
 ```bash
 docker build --progress=plain --no-cache -t job-profile-vue .
-docker run -d -p 8080:80 -p 443:443 job-profile-vue
+docker run -d -p 8080:80 job-profile-vue
 ```
+---- docker run -d -p 8080:80 -p 443:443 job-profile-vue
 ### For development:
 ```bash
 DOCKER_BUILDKIT=1 docker compose build --progress=plain --no-cache
