@@ -11,7 +11,6 @@
           <IconAccountLink type="linkedin" :url-string="linkedinUrl" />
           <IconAccountLink type="github" :url-string="githubPersonalUrl" />
           <IconAccountLink type="github" :url-string="githubRTIUrl" />
-          <IconAccountLink type="github" :url-string="githubNCSUUrl" />
         </v-card>
       </section>
     </footer>
