@@ -6,7 +6,7 @@
 
 <script>
 import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiLinkedin, mdiGithub } from '@mdi/js';
+import {mdiLinkedin, mdiGithub, mdiHome} from '@mdi/js';
 
 export default {
   name: "IconAccountLink",
@@ -29,6 +29,9 @@ export default {
         case 'github':
           return mdiGithub;
         case 'linkedin':
+          return mdiLinkedin;
+        case 'home':
+          return mdiHome;
         default:
           return mdiLinkedin;
       }
