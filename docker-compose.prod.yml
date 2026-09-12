@@ -6,6 +6,10 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/ssl/cloudflare/origin.pem:/etc/nginx/ssl/origin.pem:ro
+      - /etc/ssl/cloudflare/origin-key.pem:/etc/nginx/ssl/origin-key.pem:ro
     depends_on:
       - wordpress
     restart: unless-stopped
