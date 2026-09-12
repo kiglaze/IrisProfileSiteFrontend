@@ -2,10 +2,10 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   pages: {
-    home: {
+    index: {
       entry: 'src/pages/home/main.js',
       template: 'public/home.html',
-      filename: 'home.html',
+      filename: 'index.html',
       title: 'Home'
     },
     thesis: {

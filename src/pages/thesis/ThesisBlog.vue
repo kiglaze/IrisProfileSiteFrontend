@@ -8,7 +8,7 @@
     <footer class="footer">
       <section class="account-links">
         <v-card flat tile width="100%" class="text-center">
-          <IconAccountLink type="home" url-string="/home.html" />
+          <IconAccountLink type="home" url-string="/" />
           <IconAccountLink type="linkedin" :url-string="linkedinUrl" />
           <IconAccountLink type="github" :url-string="githubPersonalUrl" />
           <IconAccountLink type="github" :url-string="githubRTIUrl" />
