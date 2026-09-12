@@ -5,7 +5,7 @@
         <v-row>
           <div class="wrapper">
             <WordPressPost class="text" slug="personal-introduction" :include-title="false"/>
-            <WordPressPost class="profile-photo" slug="photo" :include-title="false"/>
+            <img class="profile-photo" src="~@/assets/photo.jpeg" alt=""/>
           </div>
         </v-row>
         <v-row>
@@ -35,7 +35,7 @@ export default {
   },
   props: {
     msg: String
-  },
+  }
 
 }
 
@@ -63,8 +63,8 @@ export default {
 }
 
 .wrapper .profile-photo {
-  flex: 0 0 40%;
-  width: 40%;
+  flex: 0 0 35%;
+  width: 35%;
   height: auto;
 }
 
